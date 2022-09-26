@@ -18,7 +18,7 @@ const WeatherCard = ({weather, temperature}) => {
           
         </section>
         <section className='card_second-content'>
-          <h3>{weather?.weather[0].description}</h3>
+          <h3>"{weather?.weather[0].description}"</h3>
           <ul className='info_content'>
             <li className='info_content-list'><span className='info_title'>Wind Speed:</span> {weather?.wind.speed} m/s</li>
             <li className='info_content-list'><span className='info_title'>Clouds:</span> {weather?.clouds.all} %</li>
