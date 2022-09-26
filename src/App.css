@@ -21,6 +21,10 @@
     grid-template-columns: repeat(2, 1fr);
 }
 
+.card_first-content {
+    min-height: 200px;
+}
+
 .card_title {
     grid-column: span 2;
     text-align: center;
