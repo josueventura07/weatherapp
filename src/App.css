@@ -87,4 +87,10 @@
 
 .loading {
     color: #fff;
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(65, 47, 9, 0.6);
 }

@@ -23,6 +23,7 @@ const WeatherCard = ({weather, temperature}) => {
             <li className='info_content-list'><span className='info_title'>Wind Speed:</span> {weather?.wind.speed} m/s</li>
             <li className='info_content-list'><span className='info_title'>Clouds:</span> {weather?.clouds.all} %</li>
             <li className='info_content-list'><span className='info_title'>Pressure:</span> {weather?.main.pressure} hPa</li>
+            <li className='info_content-list'><span className='info_title'>Humidity:</span> {weather?.main.humidity} %</li>
           </ul>
         </section>
         <h2 className='temperature'>{isCelsius ? `${temperature?.celsius} °C` : `${temperature?.fahrenheit} °F`}</h2>
