@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useState } from 'react'
 
 const WeatherCard = ({weather, temperature}) => {
@@ -7,6 +7,8 @@ const WeatherCard = ({weather, temperature}) => {
 
   const changeTemperature = () => setIsCelsius(!isCelsius)
 
+
+
   console.log(weather);
 
   return (
@@ -14,7 +16,7 @@ const WeatherCard = ({weather, temperature}) => {
         <h1 className='card_title'>Weather App</h1>
         <h2 className='card_subtitle'>{`${weather?.name}, ${weather?.sys.country}`}</h2>
         <section className='card_first-content'>
-          <img className='card_icon' src={weather ? `https:openweathermap.org/img/wn/${weather.weather[0].icon}@4x.png` : ''} alt="img" />
+          <img className='card_icon' src={weather.weather[0].description ? `https:openweathermap.org/img/wn/${weather.weather[0].icon}@4x.png` : ''} alt={`https:openweathermap.org/img/wn/${weather.weather[0].icon}@4x.png`} />
           
         </section>
         <section className='card_second-content'>
