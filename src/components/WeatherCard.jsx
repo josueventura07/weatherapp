@@ -16,11 +16,11 @@ const WeatherCard = ({weather, temperature}) => {
         <h1 className='card_title'>Weather App</h1>
         <h2 className='card_subtitle'>{`${weather?.name}, ${weather?.sys.country}`}</h2>
         <section className='card_first-content'>
-          <img className='card_icon' src={weather.weather[0].description ? `https:openweathermap.org/img/wn/${weather.weather[0].icon}@4x.png` : `https:openweathermap.org/img/wn/${weather.weather[0].icon}@4x.png`} alt="img" />
+          <img className='card_icon' src={weather.weather[0].description ? `https:openweathermap.org/img/wn/${weather.weather[0].icon}@4x.png` : ''} alt="img" />
           
         </section>
         <section className='card_second-content'>
-          <h3>"{weather?.weather[0].description}"</h3>
+          <h3>{weather?.weather[0].description}</h3>
           <ul className='info_content'>
             <li className='info_content-list'><span className='info_title'>Wind Speed:</span> {weather?.wind.speed} m/s</li>
             <li className='info_content-list'><span className='info_title'>Clouds:</span> {weather?.clouds.all} %</li>
